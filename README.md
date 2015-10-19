@@ -1,3 +1,2 @@
 # superlists
-Test Driven Development with Python
-This is the example created in Test Driven Development with Python. 
+Test Driven Development with Python list app.
