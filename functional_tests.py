@@ -42,13 +42,14 @@ class NewVisitorTest(unittest.TestCase):
 
         # There is still a text box inviting him to add another item. He
         # enters "Use peacock feathers to make a fly"
-        inputbox = self.browser.find_element_by_id('id_list_table')
+        inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('Use peacock feathers to make a fly')
         inputbox.send_keys(Keys.ENTER)
 
         # The page updates again, and now shows both items on his list
-        self.check_for_row_in_list_table('1: Buy peacock feathers')
         self.check_for_row_in_list_table('2: Use peacock feathers to make a fly')
+        self.check_for_row_in_list_table('1: Buy peacock feathers')
+
 
         # James  wonders whether the site will remember his list. He sees
         # that the site has generated a unique URL for him -- there is
